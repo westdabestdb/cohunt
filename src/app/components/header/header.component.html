@@ -1,0 +1,30 @@
+<div class="border-b-2">
+  <mat-toolbar class="bg-white container mx-auto ">
+    <h1 class="font-medium text-base">#jobhntr</h1>
+    <span class="spacer"></span>
+
+    <div *ngIf="authService.user as user; else showLogin">
+      <button
+      (click)="openDialog('signin')"
+        class="text-sm bg-green-400 px-6 py-2 rounded-lg font-medium hover:ring-2 ring-green-400 ring-offset-2 flex items-center justify-around"
+      >
+      <mat-icon>add</mat-icon>
+        New post
+      </button>
+    </div>
+    <ng-template #showLogin>
+    <button
+    (click)="openDialog('signin')"
+      class="text-sm bg-green-400 px-6 py-2 rounded-lg font-medium hover:ring-2 ring-green-400 ring-offset-2 uppercase"
+    >
+      Sign in
+    </button>
+    <button
+    (click)="openDialog('register')"
+      class="text-sm bg-white px-6 py-2 rounded-lg font-medium hover:ring-2 ring-green-400 ring-offset-2 uppercase"
+    >
+      Create account
+    </button>
+  </ng-template>
+  </mat-toolbar>
+</div>

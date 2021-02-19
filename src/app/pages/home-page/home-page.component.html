@@ -1,0 +1,14 @@
+<div>
+  <mat-toolbar class="bg-white border-b-2">
+    <h1 class="font-medium">Discover</h1>
+    <span class="spacer"></span>
+    <div class="flex gap-2">
+      <button *ngFor="let opt of sortOptions; let i=index" 
+      (click)="upadateSort(opt)"
+      [ngClass]="{'ring-2 font-medium bg-green-400 ring-green-400 ring-offset-2': activeSort == opt}"
+      class="text-base font-normal px-3 py-1 hover:bg-green-400 rounded-lg">
+        {{opt.title}}
+      </button>
+    </div>
+  </mat-toolbar>
+</div>

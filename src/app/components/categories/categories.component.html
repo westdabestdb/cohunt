@@ -1,0 +1,21 @@
+<div class="bg-white h-screen flex flex-col pr-2">
+  <mat-toolbar class="bg-white">
+    <h1 class="font-medium">Categories</h1>
+    <span class="spacer"></span>
+  </mat-toolbar>
+  <mat-list role="list" class="flex flex-col gap-2">
+    <a [routerLink]="[ '/discover', category.slug ]" mat-list-item *ngFor="let category of categories; let i=index" role="listitem"
+    [ngClass]="{'bg-green-100 font-semibold': activeCategory == category}"
+     class="category-item hover:bg-green-100 rounded-xl text-base font-medium cursor-pointer text-gray-700 hover:text-gray-900">
+      # {{category.title}}
+      <span class="spacer"></span>
+      <button  
+      class="follow-btn hidden text-sm font-medium px-3 py-1 rounded-lg bg-green-500 hover:ring-2 ring-green-500 ring-offset-2 text-white">
+        follow
+      </button>
+    </a>
+
+    
+  </mat-list>
+
+</div>

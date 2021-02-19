@@ -1,0 +1,7 @@
+<div class="flex justify-center flex-col items-center">
+  <div *ngIf="authService.user as user" class="flex justify-center flex-col items-center">
+    <img [src]="user.photoURL" class="w-32">
+    <h1>Hello {{ user.displayName }}!</h1>
+    <button (click)="logout()">Logout</button>
+  </div>
+</div>

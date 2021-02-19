@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cohunt-adaf0": {
+      "hosting": {
+        "jobhntr": [
+          "cohunt-adaf0"
+        ]
+      }
+    }
+  }
+}
